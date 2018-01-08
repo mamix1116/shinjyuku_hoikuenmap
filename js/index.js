@@ -413,7 +413,7 @@ $('#mainPage').on('pageshow', function() {
 		}
 
 		// レイヤー表示状態によって施設の表示を切り替える
-		updateLayerStatus({ninka: ninka, ninsyou: ninsyou, ninkagai: ninkagai, kindergarten: kindergarten});
+		updateLayerStatus({ninka: ninka, ninkagai: ninkagai, kindergarten: kindergarten});
 	});
 
 	// 絞込条件のリセット
@@ -444,11 +444,11 @@ $('#mainPage').on('pageshow', function() {
 	function updateLayerStatus(checkObj)
 	{
 		papamamap.switchLayer($('#cbNinka').prop('id'), checkObj.ninka);
-		papamamap.switchLayer($('#cbNinsyou').prop('id'), checkObj.ninsyou);
+		// papamamap.switchLayer($('#cbNinsyou').prop('id'), checkObj.ninsyou);
 		papamamap.switchLayer($('#cbNinkagai').prop('id'), checkObj.ninkagai);
 		papamamap.switchLayer($('#cbKindergarten').prop('id'), checkObj.kindergarten);
 		$('#cbNinka').prop('checked', checkObj.ninka).checkboxradio('refresh');
-		$('#cbNinsyou').prop('checked', checkObj.ninsyou).checkboxradio('refresh');
+		// $('#cbNinsyou').prop('checked', checkObj.ninsyou).checkboxradio('refresh');
 		$('#cbNinkagai').prop('checked', checkObj.ninkagai).checkboxradio('refresh');
 		$('#cbKindergarten').prop('checked', checkObj.kindergarten).checkboxradio('refresh');
 	}
