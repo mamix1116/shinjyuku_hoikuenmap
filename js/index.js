@@ -413,7 +413,7 @@ $('#mainPage').on('pageshow', function() {
 		}
 
 		// レイヤー表示状態によって施設の表示を切り替える
-		updateLayerStatus({ninka: ninka, ninkagai: ninkagai);
+		updateLayerStatus({ninka: ninka, ninkagai: ninkagai});
 		// updateLayerStatus({ninka: true, ninsyou: true, ninkagai: true, kindergarten: true});
 	});
 
