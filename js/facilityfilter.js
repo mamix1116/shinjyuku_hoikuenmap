@@ -120,7 +120,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                 return true;
             }
         };
-        ninkagaiFeatures = ninkagaiFeatures.filter(filterfunc);
+        ninkaFeatures = ninkaFeatures.filter(filterfunc);
     }
     // 認可保育所：一時
     if(conditions['ninkaIchijiHoiku']) {
@@ -242,7 +242,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                 return true;
             }
         };
-        ninkaFeatures = ninkagaiFeatures.filter(filterfunc);
+        ninkagaiFeatures = ninkagaiFeatures.filter(filterfunc);
     }
     // 認可外保育所：休日
     if(conditions['ninkagaiKyujitu']) {
@@ -252,7 +252,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                 return true;
             }
         };
-        ninkaFeatures = ninkagaiFeatures.filter(filterfunc);
+        ninkagaiFeatures = ninkagaiFeatures.filter(filterfunc);
     }
     // 認可外保育所：病児・病後児
     if(conditions['ninkgaiByouji']) {
@@ -262,7 +262,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                 return true;
             }
         };
-        ninkaFeatures = ninkagaiFeatures.filter(filterfunc);
+        ninkagaiFeatures = ninkagaiFeatures.filter(filterfunc);
     }
     // 認可外保育所：証明あり
     if(conditions['ninkagaiShomei']) {
@@ -282,7 +282,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                 return true;
             }
         };
-        ninkaFeatures = ninkaFeatures.filter(filterfunc);
+        ninkagaiFeatures = ninkagaiFeatures.filter(filterfunc);
     }
     // console.log("[after]ninkagaiFeatures length:", ninkagaiFeatures.length);
 
