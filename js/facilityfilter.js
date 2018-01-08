@@ -99,7 +99,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                         checkAry = ["22:00", "23:00", "0:00", "11:00", "2:00"];
                         break;
                     case "24":
-                        checkAry = ["0:00", "11:00", "2:00"]];
+                        checkAry = ["0:00", "11:00", "2:00"];
                         break;
                 }
                 var close = item.properties['終園時間'] ? item.properties['終園時間'] : item.properties['Close'];
@@ -208,10 +208,10 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
                       checkAry = ["20:00", "20:15", "20:30", "21:00", "21:30", "22:00", "23:00", "0:00", "11:00", "2:00"];
                       break;
                   case "22":
-                      checkAry = ["22:00", "23:00", "0:00", "11:00", "2:00"]];
+                      checkAry = ["22:00", "23:00", "0:00", "11:00", "2:00"];
                       break;
                   case "24":
-                      checkAry = ["0:00", "11:00", "2:00"]];
+                      checkAry = ["0:00", "11:00", "2:00"];
                       break;
                 }
                 var h24   = item.properties['H24'] ? item.properties['H24'] : item.properties['H24'];
