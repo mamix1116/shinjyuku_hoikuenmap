@@ -5,31 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- metatag -->
-        <meta name="copyright" content="Code for Tokyo" />
-        <meta name="description" content="Tokyo保育園マップを使うと、都内で自治体の境界線を超えて横断的に保育園を探すことができます。" />
-        <meta name="keywords" content="保育園マップ, 地図, 都内, 東京, Code for Tokyo, Code for Sapporo" />
+        <meta name="copyright" content="Code for Shinjyuku" />
+        <meta name="description" content="新宿保育園マップを使うと、区内の保育園等の保育施設を探すことができます。" />
+        <meta name="keywords" content="保育園マップ, 地図, 新宿, 東京, Code for Shinjyuku" />
         <!-- /metatag -->
 
         <!-- facebook -->
-        <meta property="og:title" content="Tokyo保育園マップβ版 by Code for Tokyo">
-        <meta property="og:site_name" content="Code for Tokyo" />
+        <meta property="og:title" content="新宿保育園マップ by Code for Shinjyuku">
+        <meta property="og:site_name" content="Code for Shinjyuku" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Tokyo保育園マップを使うと、都内で自治体の境界線を超えて横断的に保育園を探すことができます。">
-        <meta property="og:url" content="http://hoikuenmap.codefor.tokyo/">
+        <meta property="og:description" content="新宿保育園マップを使うと、都内で自治体の境界線を超えて横断的に保育園を探すことができます。">
+        <meta property="og:url" content="https://mamix1116.github.io/shinjyuku_hoikuenmap/">
         <meta property="og:image" content="image/ogp.png">
-        <meta property="fb:app_id" content="812979035424925" />
+        <meta property="fb:app_id" content="" />
         <!-- /facebook -->
 
         <!-- twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@codefortokyo">
-        <meta name="twitter:creator" content="@codefortokyo">
-        <meta name="twitter:title" content="Tokyo保育園マップβ版 by Code for Tokyo">
-        <meta name="twitter:description" content="Tokyo保育園マップを使うと、都内で自治体の境界線を超えて横断的に保育園を探すことができます。">
+        <meta name="twitter:site" content="@codeforshinjyuku">
+        <meta name="twitter:creator" content="@codeforshinjuku">
+        <meta name="twitter:title" content="新宿保育園マップ">
+        <meta name="twitter:description" content="新宿保育園マップを使うと、都内で自治体の境界線を超えて横断的に保育園を探すことができます。">
         <meta name="twitter:image" content="image/ogp.png">
         <!-- /twitter -->
 
-        <title>Tokyo保育園マップβ版 by Code for Tokyo</title>
+        <title>新宿保育園マップ</title>
         <link rel="stylesheet" href="css/ol.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap.css.map" type="text/css">
@@ -49,17 +49,20 @@
     <body>
         <div data-role="page" id="mainPage">
             <div role="main" class="ui-content">
-            <h1 class="col-md-4 h4">Tokyo保育園マップβ版 by Code for Tokyo</h1>
+            <h1 class="col-md-4 h4">新宿保育園マップ</h1>
             <div id="nav" class="col-md-8 text-right">
                 <fieldset id="nav1" data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <label for="cbNinka" id="lblNinka">認可</label>
                     <input type="checkbox" name="cbNinka" id="cbNinka" checked="checked">
 
+                    <label for="cbNinsyou" id="lblNinsyou">認証</label>
+                    <input type="checkbox" name="cbNinsyou" id="cbNinsyou" checked="checked">
+
                     <label for="cbNinkagai" id="lblNinkagai">認証</label>
                     <input type="checkbox" name="cbNinkagai" id="cbNinkagai" checked="checked">
 
-                    <label for="cbKindergarten" id="lblKindergarten">幼</label>
-                    <input type="checkbox" name="cbKindergarten" id="cbKindergarten" checked="checked">
+                    <!-- <label for="cbKindergarten" id="lblKindergarten">幼</label>
+                    <input type="checkbox" name="cbKindergarten" id="cbKindergarten" checked="checked"> -->
 
                     <label for="cbElementarySchool" id="lblElementarySchool">小</label>
                     <input type="checkbox" name="cbElementarySchool" id="cbElementarySchool">
@@ -99,9 +102,9 @@
                     </select>
 
                     <!-- <a id="btnHelp" href="https://github.com/codefortokyo/tokyohoikuenmap" target="_blank" class="ui-btn ui-icon-question ui-btn-icon-notext">help</a> -->
-                    
+
                     <a id="btnHelp" href="#helpDialog" data-rel="popup" data-position-to="window" class="ui-btn ui-icon-question ui-btn-icon-notext">help</a>
-                    
+
                 </fieldset>
             </div>
             <div id="map" class="map">
@@ -117,7 +120,6 @@
             <form>
                 <div style="padding:10px 20px;">
                     <h3>保育施設 絞り込み</h3>
-                    <p>ごめんなさい。β版は検索機能に対応しておりません。</p>
                     <legend>認可保育園</legend>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                         <label for="ninkaOpenTime" class="select">開園</label>
@@ -144,7 +146,7 @@
                         <input type="checkbox" id="ninkaKyujitu" class="filtercb">
                     </fieldset>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-                        <label for="ninkaVacancy">空きあり（試用版。最新の空き状況ではありません）</label>
+                        <label for="ninkaVacancy">空きあり</label>
                         <input type="checkbox" id="ninkaVacancy" class="filtercb">
                     </fieldset>
                     <legend>認可外保育園</legend>
@@ -183,16 +185,16 @@
         <div data-role="popup" data-history="false" id="helpDialog" data-theme="a" class="ui-corner-all ui-icon-delete ui-btn-left">
             <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
             <div style="padding:10px 20px;">
-                <h3>東京保育園マップ</h3>
+                <h3>新宿保育園マップ</h3>
                 <fieldset>
                     <p>
-                    v0.1 (rev.20160216)
+                    v0.1 (rev.20180108)
                     </p>
-                    <a href="https://github.com/codefortokyo/tokyohoikuenmap" target="_blank">詳しくはこちら</a>
+                    <a href="https://github.com/mamix1116/shinjyuku_hoikuenmap" target="_blank">詳しくはこちら</a>
                 </fieldset>
                 <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <p>
-                    (C) 2016 <a href="http://codefor.tokyo/" target="_blank">Code for Tokyo.</a>
+                    (C) 2016 <a href="http://codeforshinjuku.org/" target="_blank">Code for Shinjyuku.</a>
                     </p>
                     <a href="#" data-rel="back" id="helpClose" class="ui-btn ui-corner-all ui-btn-a ui-btn-icon-left ui-icon-check">閉じる</a>
                 </fieldset>
