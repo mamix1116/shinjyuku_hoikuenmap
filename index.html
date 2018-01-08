@@ -125,7 +125,10 @@
                         <label for="ninkaOpenTime" class="select">開園</label>
                         <select id="ninkaOpenTime" class="filtersb">
                             <option value="">開園</option>
-                            <option value="7">7:00</option>
+                            <option value="7">7:00以前</option>
+                            <option value="8">8:00以前</option>
+                            <option value="9">9:00以前</option>
+                            <option value="10">9:00以降</option>
                         </select>
                         <label for="ninkaCloseTime" class="select">終園</label>
                         <select id="ninkaCloseTime" class="filtersb">
@@ -134,8 +137,10 @@
                             <option value="19">19:00以降</option>
                             <option value="20">20:00以降</option>
                             <option value="22">22:00以降</option>
-                            <option value="24">00:00</option>
+                            <option value="24">00:00以降</option>
                         </select>
+                        <label for="ninkagai24H">24時間</label>
+                        <input type="checkbox" id="ninka24H" class="filtercb">
                     </fieldset>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                         <label for="ninkaIchijiHoiku">一時保育</label>
@@ -144,6 +149,8 @@
                         <input type="checkbox" id="ninkaYakan" class="filtercb">
                         <label for="ninkaKyujitu">休日</label>
                         <input type="checkbox" id="ninkaKyujitu" class="filtercb">
+                        <label for="ninkaByouji">病児・病後児</label>
+                        <input type="checkbox" id="ninkaByouji" class="filtercb">
                     </fieldset>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                         <label for="ninkaVacancy">空きあり</label>
@@ -154,10 +161,10 @@
                         <label for="ninkagaiOpenTime" class="select">開園</label>
                         <select id="ninkagaiOpenTime" class="filtersb">
                             <option value="">開園</option>
-                            <option value="7:00">7:00</option>
-                            <option value="7:30">7:30以前</option>
-                            <option value="7:45">7:45以前</option>
-                            <option value="8:00">8:00以前</option>
+                            <option value="7">7:00以前</option>
+                            <option value="8">8:00以前</option>
+                            <option value="9">9:00以前</option>
+                            <option value="10">9:00以降</option>
                         </select>
                         <label for="ninkagaiCloseTime" class="select">終園</label>
                         <select id="ninkagaiCloseTime" class="filtersb">
@@ -166,10 +173,20 @@
                             <option value="19">19:00以降</option>
                             <option value="20">20:00以降</option>
                             <option value="22">22:00以降</option>
-                            <option value="27">03:00</option>
+                            <option value="24">00:00以降</option>
                         </select>
                         <label for="ninkagai24H">24時間</label>
                         <input type="checkbox" id="ninkagai24H" class="filtercb">
+                    </fieldset>
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <label for="ninkagaiIchijiHoiku">一時保育</label>
+                        <input type="checkbox" id="ninkagaiIchijiHoiku" class="filtercb">
+                        <label for="ninkagaiYakan">夜間</label>
+                        <input type="checkbox" id="ninkagaiYakan" class="filtercb">
+                        <label for="ninkagaiKyujitu">休日</label>
+                        <input type="checkbox" id="ninkagaiKyujitu" class="filtercb">
+                        <label for="ninkagaiByouji">病児・病後児</label>
+                        <input type="checkbox" id="ninkagaiByouji" class="filtercb">
                     </fieldset>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <label for="ninkagaiShomei">証明書あり</label>
