@@ -339,6 +339,10 @@ $('#mainPage').on('pageshow', function() {
 			conditions['ninkaCloseTime'] = $('#ninkaCloseTime option:selected').val();
 			ninka = true;
 		}
+		if($('#ninka24H').prop('checked')) {
+			conditions['ninka24H'] = 1;
+			ninka = true;
+		}
 		if($('#ninkaIchijiHoiku').prop('checked')) {
 			conditions['ninkaIchijiHoiku'] = 1;
 			ninka = true;
@@ -349,6 +353,10 @@ $('#mainPage').on('pageshow', function() {
 		}
 		if($('#ninkaKyujitu').prop('checked')) {
 			conditions['ninkaKyujitu'] = 1;
+			ninka = true;
+		}
+		if($('#ninkaByouji').prop('checked')) {
+			conditions['ninkaByouji'] = 1;
 			ninka = true;
 		}
 		if($('#ninkaVacancy').prop('checked')) {
@@ -369,8 +377,24 @@ $('#mainPage').on('pageshow', function() {
 			conditions['ninkagai24H'] = 1;
 			ninkagai = true;
 		}
+		if($('#ninkagaiYakan').prop('checked')) {
+			conditions['ninkagaiYakan'] = 1;
+			ninkagai = true;
+		}
+		if($('#ninkagaiyujitu').prop('checked')) {
+			conditions['ninkagaiKyujitu'] = 1;
+			ninkagai = true;
+		}
+		if($('#ninkagaiByouji').prop('checked')) {
+			conditions['ninkagaiByouji'] = 1;
+			ninkagai = true;
+		}
 		if($('#ninkagaiShomei').prop('checked')) {
 			conditions['ninkagaiShomei'] = 1;
+			ninkagai = true;
+		}
+		if($('#ninkagaiVacancy').prop('checked')) {
+			conditions['ninkagaiVacancy'] = 1;
 			ninkagai = true;
 		}
 
