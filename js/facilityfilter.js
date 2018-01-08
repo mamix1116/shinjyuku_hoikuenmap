@@ -27,12 +27,12 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     Array.prototype.push.apply(ninkaFeatures, _features);
 
     // 認証保育園の検索元データを取得
-    var ninkaFeatures = [];
+    var ninsyouFeatures = [];
     _features = nurseryFacilities.features.filter(function (item,idx) {
             var type = item.properties['種別'] ? item.properties['種別'] : item.properties['Type'];
             if(type == "認証") return true;
         });
-    Array.prototype.push.apply(ninkaFeatures, _features);
+    Array.prototype.push.apply(ninsyouFeatures, _features);
 
     // 認可外保育園の検索元データを取得
     var ninkagaiFeatures = [];
