@@ -1,5 +1,5 @@
 // 地図表示時の中心座標
-var init_center_coords = [139.766084, 35.681382];
+var init_center_coords = [139.703463,35.69389];
 
 // Bing APIのキー
 var bing_api_key = 'Ap-kk3eox-rGrZ07nFRNVGWy6BlbbkhXeXi-TwvOuIcltcoLsuEsEoBEWmVTWHOe';
@@ -232,6 +232,11 @@ $('#mainPage').on('pageshow', function() {
 
 	// 認可保育所チェックボックスのイベント設定
 	$('#cbNinka').click(function() {
+		papamamap.switchLayer(this.id, $(this).prop('checked'));
+	});
+
+	// 認証保育所チェックボックスのイベント設定
+	$('#cbNinsyou').click(function() {
 		papamamap.switchLayer(this.id, $(this).prop('checked'));
 	});
 

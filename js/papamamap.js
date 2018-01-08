@@ -178,6 +178,17 @@ Papamamap.prototype.addNurseryFacilitiesLayer = function(facilitiesData)
             style: ninkagaiStyleFunction
         })
     );
+    // 認証
+    this.map.addLayer(
+        new ol.layer.Vector({
+            source: new ol.source.GeoJSON({
+                projection: 'EPSG:3857',
+                object: facilitiesData
+            }),
+            name: 'layerNinsyou',
+            style: ninkagaiStyleFunction
+        })
+    );
     // 認可
     this.map.addLayer(
         new ol.layer.Vector({
