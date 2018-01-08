@@ -58,7 +58,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaOpenTime']) {
       filterfunc = function (item, idx) {
           f = function (item,idx) {
-              switch(conditions['ninkaCloseTime']) {
+              switch(conditions['ninkaOpenTime']) {
                   case "7":
                       checkAry = ["7:00"];
                       break;
