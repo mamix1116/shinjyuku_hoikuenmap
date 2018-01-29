@@ -391,7 +391,6 @@ Papamamap.prototype.getPopupContent = function(feature)
         if (h24 !== undefined && h24 !== null) {
             content += '24時間 ';
         }
-        console.log("Holiday:", holiday);
         content += '</td>';
         content += '</tr>';
     }
