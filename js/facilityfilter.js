@@ -172,7 +172,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
         };
         ninkaFeatures = ninkaFeatures.filter(filterfunc);
     }
-    // console.log("[after]ninkaFeatures length:", ninkaFeatures.length);
+    console.log("[after]ninkaFeatures length:", ninkaFeatures.length);
 
     // ----------------------------------------------------------------------
     // 認可外保育所向けフィルター
@@ -284,7 +284,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
         };
         ninkagaiFeatures = ninkagaiFeatures.filter(filterfunc);
     }
-    // console.log("[after]ninkagaiFeatures length:", ninkagaiFeatures.length);
+    console.log("[after]ninkagaiFeatures length:", ninkagaiFeatures.length);
 
     // ----------------------------------------------------------------------
     // 幼稚園向けフィルター
