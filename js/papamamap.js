@@ -329,7 +329,7 @@ Papamamap.prototype.getPopupTitle = function(feature)
 {
     // タイトル部
     var title = '';
-    var type = feature.get('種別') ? feature.get('種別') : feature.get('Type');
+    var type = feature.get('種別') ? feature.get('種別') : feature.get('Type_desc');
     title  = '[' + type + '] ';
     var owner = feature.get('設置') ? feature.get('設置') : feature.get('Ownership');
     if(owner !== undefined && owner !== null && owner !== "") {
@@ -370,7 +370,6 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '<td>' + memo + '</td>';
         content += '</tr>';
     }
-    console.log(memo)
     var temp    = feature.get('一時') ? feature.get('一時') : feature.get('Temp');
     var holiday = feature.get('休日') ? feature.get('休日') : feature.get('Holiday');
     var night   = feature.get('夜間') ? feature.get('夜間') : feature.get('Night');
@@ -408,7 +407,7 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '</td>';
         content += '</tr>';
     }
-    if(type == "認可保育所") {
+    if(type == "Type") {
         content += '<tr>';
         content += '<th>欠員</th>';
         content += '<td>';
