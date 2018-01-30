@@ -367,7 +367,6 @@ Papamamap.prototype.getPopupContent = function(feature)
     if (capall !== undefined && memo !== null) {
         content += '<tr>';
         content += '<th>定員</th>';
-        content += '<th></th>';
         content += '<td>' + capall + '</td>';
         content += '</tr>';
     }
