@@ -363,6 +363,14 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '</td>';
         content += '</tr>';
     }
+    var capall  = feature.get('定員') ? feature.get('定員') : feature.get('Capall');
+    if (capall !== undefined && memo !== null) {
+        content += '<tr>';
+        content += '<th>定員</th>';
+        content += '<th></th>';
+        content += '<td>' + capall + '</td>';
+        content += '</tr>';
+    }
     var memo = feature.get('備考') ? feature.get('備考') : feature.get('Memo');
     if (memo !== undefined && memo !== null) {
         content += '<tr>';
