@@ -43,18 +43,18 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     Array.prototype.push.apply(ninkagaiFeatures, _features);
 
     // 幼稚園の検索元データを取得
-    // var youchienFeatures = [];
-    // _features = nurseryFacilities.features.filter(function (item,idx) {
-    //         var type = item.properties['種別'] ? item.properties['種別'] : item.properties['Type'];
-    //         if(type == "幼稚園") return true;
-    //     });
-    // Array.prototype.push.apply(youchienFeatures, _features);
+    var youchienFeatures = [];
+    _features = nurseryFacilities.features.filter(function (item,idx) {
+            var type = item.properties['種別'] ? item.properties['種別'] : item.properties['Type'];
+            if(type == "幼稚園") return true;
+        });
+    Array.prototype.push.apply(youchienFeatures, _features);
 
     // ----------------------------------------------------------------------
     // 認可保育所向けフィルター
     // ----------------------------------------------------------------------
     // 認可保育所：開園時間
-    console.log("[before]ninkaFeatures length:", ninkaFeatures.length);
+    // console.log("[before]ninkaFeatures length:", ninkaFeatures.length);
     if(conditions['ninkaOpenTime']) {
       filterfunc = function (item, idx) {
           f = function (item,idx) {
