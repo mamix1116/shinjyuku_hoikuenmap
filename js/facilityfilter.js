@@ -295,7 +295,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     var features = [];
     Array.prototype.push.apply(features, ninkaFeatures);
     Array.prototype.push.apply(features, ninkagaiFeatures);
-    // Array.prototype.push.apply(features, youchienFeatures);
+    Array.prototype.push.apply(features, youchienFeatures);
     // console.log("getFilteredFeaturesGeoJson: return value: ", features.length);
     newGeoJson.features = features;
     return newGeoJson;
