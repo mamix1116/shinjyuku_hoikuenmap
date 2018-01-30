@@ -116,7 +116,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninka24H']) {
         filterfunc = function (item,idx) {
             var h24 = item.properties['H24'] ? item.properties['H24'] : item.properties['H24'];
-            if(h24 !== null) {
+            if(h24 !== "") {
                 return true;
             }
         };
@@ -126,7 +126,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaIchijiHoiku']) {
         filterfunc = function (item,idx) {
             var temp = item.properties['一時'] ? item.properties['一時'] : item.properties['Temp'];
-            if(temp !== null) {
+            if(temp !== "") {
                 return true;
             }
         };
@@ -136,7 +136,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaYakan']) {
         filterfunc = function (item,idx) {
             var night = item.properties['夜間'] ? item.properties['夜間'] : item.properties['Night'];
-            if(night !== null) {
+            if(night !== "") {
                 return true;
             }
         };
@@ -146,7 +146,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaKyujitu']) {
         filterfunc = function (item,idx) {
             var holiday = item.properties['休日'] ? item.properties['休日'] : item.properties['Holiday'];
-            if(holiday !== null) {
+            if(holiday !== "") {
                 return true;
             }
         };
