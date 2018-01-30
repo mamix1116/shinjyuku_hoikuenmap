@@ -116,7 +116,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninka24H']) {
         filterfunc = function (item,idx) {
             var h24 = item.properties['H24'] ? item.properties['H24'] : item.properties['H24'];
-            if(h24 !== "") {
+            if(h24 !== null) {
                 return true;
             }
         };
@@ -126,7 +126,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaIchijiHoiku']) {
         filterfunc = function (item,idx) {
             var temp = item.properties['一時'] ? item.properties['一時'] : item.properties['Temp'];
-            if(temp !== "") {
+            if(temp !== null) {
                 return true;
             }
         };
@@ -136,7 +136,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaYakan']) {
         filterfunc = function (item,idx) {
             var night = item.properties['夜間'] ? item.properties['夜間'] : item.properties['Night'];
-            if(night !== "") {
+            if(night !== null) {
                 return true;
             }
         };
@@ -146,7 +146,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     if(conditions['ninkaKyujitu']) {
         filterfunc = function (item,idx) {
             var holiday = item.properties['休日'] ? item.properties['休日'] : item.properties['Holiday'];
-            if(holiday !== "") {
+            if(holiday !== null) {
                 return true;
             }
         };
@@ -295,7 +295,7 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     var features = [];
     Array.prototype.push.apply(features, ninkaFeatures);
     Array.prototype.push.apply(features, ninkagaiFeatures);
-    Array.prototype.push.apply(features, youchienFeatures);
+    // Array.prototype.push.apply(features, youchienFeatures);
     // console.log("getFilteredFeaturesGeoJson: return value: ", features.length);
     newGeoJson.features = features;
     return newGeoJson;
